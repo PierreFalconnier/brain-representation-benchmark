@@ -1,0 +1,49 @@
+# transforms/default.yaml
+train:
+  _target_: monai.transforms.Compose
+  transforms:
+    - _target_: monai.transforms.LoadImaged
+      keys: ["x0"]
+    - _target_: monai.transforms.ToTensord
+      keys: ["x0"]
+    - _target_: monai.transforms.EnsureChannelFirstd
+      keys: ["x0"]
+    - _target_: monai.transforms.ScaleIntensityRangePercentilesd
+      keys: ["x0"]
+      lower: 0.1
+      upper: 99.9
+      b_min: 0.0
+      b_max: 1.0
+      clip: True
+    - _target_: monai.transforms.CropForegroundd
+      keys: ["x0"]
+      source_key: "x0"
+    - _target_: monai.transforms.ResizeWithPadOrCropd
+      keys: ["x0"]
+      spatial_size: [160,192,160]
+
+val:
+  _target_: monai.transforms.Compose
+  transforms:
+    - _target_: monai.transforms.LoadImaged
+      keys: ["x0"]
+    - _target_: monai.transforms.ToTensord
+      keys: ["x0"]
+    - _target_: monai.transforms.EnsureChannelFirstd
+      keys: ["x0"]
+    - _target_: monai.transforms.ScaleIntensityRangePercentilesd
+      keys: ["x0"]
+      lower: 0.1
+      upper: 99.9
+      b_min: 0.0
+      b_max: 1.0
+      clip: True
+    - _target_: monai.transforms.CropForegroundd
+      keys: ["x0"]
+      source_key: "x0"
+    - _target_: monai.transforms.ResizeWithPadOrCropd
+      keys: ["x0"]
+      spatial_size: [160,192,160]
+
+
+test: ${.val}

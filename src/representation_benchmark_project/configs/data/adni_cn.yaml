@@ -1,0 +1,8 @@
+defaults:
+  - adni
+
+csv_path: ${data.root_dir}/ADNI_CN.csv
+
+metadata_columns:
+  - age_at_visit
+  - sex

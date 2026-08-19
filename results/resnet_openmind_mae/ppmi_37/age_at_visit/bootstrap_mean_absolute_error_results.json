@@ -1,0 +1,8 @@
+{
+    "metric": "mean_absolute_error",
+    "mean": 5.309906664549363,
+    "confidence_interval": {
+        "lower": 4.608683499012859,
+        "upper": 6.061584114796321
+    }
+}

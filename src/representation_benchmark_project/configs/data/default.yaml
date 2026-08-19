@@ -1,0 +1,36 @@
+_target_: representation_benchmark_project.data.datamodule.BIDSDataModule
+
+root_dir: ${paths.data_dir}
+# modalities:
+# csv_path: 
+# metadata_columns: 
+# stratify_columns: 
+
+# sub_prefix: str = "sub-",
+# session_prefix: str = "ses-",
+
+train_transform: ${transforms.train}
+val_transform: ${transforms.val}
+test_transform: ${transforms.test}
+
+train_split: 0.0
+val_split: 0.0 # therefore test_split is 100%
+
+batch_size: 4
+num_workers: 2
+pin_memory: true
+
+shuffle_train: false
+shuffle_val: false
+shuffle_test: false
+
+drop_last_train: false
+drop_last_val: false
+drop_last_test: false
+
+random_state: # defined in task.yaml, used for data splitting 
+
+
+
+
+

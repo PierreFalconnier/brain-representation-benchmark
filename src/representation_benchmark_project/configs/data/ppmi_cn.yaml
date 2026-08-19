@@ -1,0 +1,12 @@
+defaults:
+  - ppmi
+
+csv_path: ${data.root_dir}/PPMI_CN.csv
+
+metadata_columns:
+  - age_at_visit
+  - sex
+
+
+
+

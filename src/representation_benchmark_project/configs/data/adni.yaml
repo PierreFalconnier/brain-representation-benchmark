@@ -1,0 +1,13 @@
+defaults:
+  - default
+
+root_dir: ${paths.data_dir}/ADNI_T1w_curated
+csv_path: ${data.root_dir}/ADNI_CN_AD.csv
+
+modalities:
+  x0: "*T1w_brain.npy"
+
+metadata_columns:
+  - diagnosis
+  - age_at_visit
+  - sex

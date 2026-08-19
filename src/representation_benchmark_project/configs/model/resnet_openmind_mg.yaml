@@ -1,0 +1,2 @@
+_target_: representation_benchmark_project.models.backbones.openmind.OpenMindEncoder
+checkpoint_hf: "AnonRes/ResEncL-OpenMind-MG/checkpoint_final.pth"

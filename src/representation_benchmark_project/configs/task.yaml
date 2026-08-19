@@ -1,0 +1,45 @@
+# @package _global_
+
+# specify here default configuration
+# order of defaults determines the order in which configs override each other
+defaults:
+  - _self_
+  - data: ppmi
+  - transforms: default
+  - model: resnet50
+  - paths: default
+  - extras: default
+  - hydra: default
+  - experiment: null
+  # - hydra/launcher: null
+
+# task name, determines output directory path
+task_name: "backbone_evaluation"
+tags: ["dev"]
+
+ # compile model with pytorch 2.0
+compile: false
+device: cuda
+n_jobs: 5
+# adaptation method of 2D backbone for 3D data
+adapt_method: 3_axis # in "1_axis", "3_axis", "raptor", else None ok if backbone can handle 3D input
+
+# rng seed in pytorch, numpy and python.random
+seed: 37
+
+# dataset seed
+data:
+  random_state: ${seed} # for data splitting 
+
+# task
+target_key: sex # either "age_at_visit", "diagnosis" or "sex"
+
+
+# number of bootstrap iterations
+n_splits: 10000 
+
+# output directory pattern, used to store all files generated during the run, like metrics
+# results_dir: results
+results_dir: results
+output_dir:  ${paths.root_dir}/${results_dir}/${hydra:runtime.choices.model}/${hydra:runtime.choices.data}_${seed}/${target_key}
+force_compute: false # if true, features will be recomputed even if they already exist in cache

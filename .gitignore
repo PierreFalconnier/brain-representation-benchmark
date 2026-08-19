@@ -1,0 +1,29 @@
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+.venv
+
+logs/
+tests/
+*.sh
+*.pbs
+
+results_raptor/
+# ignore everything inside any results* folder
+# but allow git to traverse into subdirectories 
+# re-include any bootstrap*.json files at any depth
+results*/**
+!results*/**/
+!results*/**/bootstrap*.json
+
+
+submodules/RadImageNet/ResNet50.pt
+submodules/fomo25_mmunetvae_pretrained.ckpt
+
+datasets_info.py
+paired_bootstrap.py
+run.py

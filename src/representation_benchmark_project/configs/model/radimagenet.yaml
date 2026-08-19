@@ -1,0 +1,4 @@
+# the weights are available on https://github.com/BMEII-AI/RadImageNet
+# more precisely at : https://drive.google.com/file/d/1RHt2GnuOYlc_gcoTETtBDSW73mFyRAtR/view 
+_target_: representation_benchmark_project.models.backbones.rad_imagenet.RadImagenet
+weights_path: "${hydra:runtime.cwd}/submodules/RadImageNet/ResNet50.pt"

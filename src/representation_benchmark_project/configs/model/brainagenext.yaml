@@ -1,0 +1,2 @@
+_target_: representation_benchmark_project.models.backbones.brain_age_next.BrainAgeNeXt
+checkpoint_hf: "FrancescoLR/BrainAgeNeXt/BrainAge_1.pth"

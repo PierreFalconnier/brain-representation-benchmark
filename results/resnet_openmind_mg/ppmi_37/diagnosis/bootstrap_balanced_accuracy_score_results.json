@@ -1,0 +1,8 @@
+{
+    "metric": "balanced_accuracy_score",
+    "mean": 0.6098505065441734,
+    "confidence_interval": {
+        "lower": 0.5620563500504574,
+        "upper": 0.6548841513839558
+    }
+}

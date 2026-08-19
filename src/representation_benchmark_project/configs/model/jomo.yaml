@@ -1,0 +1,3 @@
+# the weights are available on https://github.com/jbanusco/fomo25/releases/tag/v1.0.0
+_target_: representation_benchmark_project.models.backbones.fomo2jomo.JomoBackbone
+checkpoint_path: "${hydra:runtime.cwd}/submodules/fomo25_mmunetvae_pretrained.ckpt"

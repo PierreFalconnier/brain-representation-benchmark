@@ -1,0 +1,2 @@
+_target_: representation_benchmark_project.models.backbones.timm_extractor.TimmExtractor
+model_name: resnet50.a1_in1k

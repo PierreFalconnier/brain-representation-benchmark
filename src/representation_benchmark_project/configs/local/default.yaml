@@ -1,0 +1,8 @@
+# @package _global_
+
+# hydra allows you to reference variables in .yaml configs with special syntax: ${oc.env:MY_VAR}
+# LOCAL VERSION ON DESKTOP, DATA ARE STORED ON EXTERNAL DRIVE
+hydra:
+  job:
+    env_set:
+      DATA_DIR: "/home/user/my/system/path"

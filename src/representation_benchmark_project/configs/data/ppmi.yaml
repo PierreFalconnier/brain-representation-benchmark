@@ -1,0 +1,17 @@
+defaults:
+  - default
+
+root_dir: ${paths.data_dir}/PPMI_T1w_curated
+
+modalities:
+  x0: "*T1w_brain.npy"
+
+
+csv_path: ${data.root_dir}/PPMI_CN_PD.csv
+
+metadata_columns:
+  - diagnosis
+  - age_at_visit
+  - sex
+
+

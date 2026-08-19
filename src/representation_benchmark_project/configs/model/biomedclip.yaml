@@ -1,0 +1,2 @@
+_target_: representation_benchmark_project.models.backbones.biomed_clip.BiomedCLIP
+model_name: "hf-hub:microsoft/BiomedCLIP-PubMedBERT_256-vit_base_patch16_224"

@@ -1,0 +1,2 @@
+_target_: representation_benchmark_project.models.backbones.timm_extractor.TimmExtractor
+model_name: swin_base_patch4_window7_224.ms_in22k
