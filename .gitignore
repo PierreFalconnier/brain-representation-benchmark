@@ -21,8 +21,7 @@ results*/**
 !results*/**/bootstrap*.json
 
 
-submodules/RadImageNet/ResNet50.pt
-submodules/fomo25_mmunetvae_pretrained.ckpt
+submodules/
 
 datasets_info.py
 paired_bootstrap.py
