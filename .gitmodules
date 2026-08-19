@@ -1,4 +1,0 @@
-[submodule "submodules/fomo-code"]
-	path = submodules/fomo-code
-	url = https://github.com/jbanusco/fomo25
-	branch = docker-alps
