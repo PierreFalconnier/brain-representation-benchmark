@@ -109,10 +109,14 @@ Install it (on Linux and macOS) by running:
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-1. Download the repository.
+1. Clone the repository.
    ```bash
-   git clone https://github.com/PierreFalconnier/mri-representation-learning.git
-   cd mri-representation-learning
+   git clone --recurse-submodules https://github.com/PierreFalconnier/brain-representation-benchmark.git
+   cd brain-representation-benchmark
+   ```
+   If you already cloned without using `--recurse-submodules`, then run
+   ```bash
+   git submodule update --init --recursive
    ```
 2. Create a virtual environment and install the project and its dependencies.
    ```bash
